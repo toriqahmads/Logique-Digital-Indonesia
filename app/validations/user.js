@@ -49,6 +49,11 @@ const create = () => {
       .notEmpty()
       .isString()
       .matches(cvv)
+      .escape(),
+    body('credit_card_type')
+      .exists()
+      .notEmpty()
+      .isString()
       .escape()
   ]
 }
@@ -106,6 +111,11 @@ const update = () => {
       .notEmpty()
       .isString()
       .matches(cvv)
+      .escape(),
+    body('credit_card_type')
+      .exists()
+      .notEmpty()
+      .isString()
       .escape()
   ]
 }
@@ -116,20 +126,30 @@ const findAll = () => {
       .exists()
       .notEmpty()
       .isString(),
-    query('name')
+    query('q')
       .optional()
       .notEmpty()
       .isString()
       .escape(),
-    query('address')
+    query('ob')
       .optional()
       .notEmpty()
       .isString()
       .escape(),
-    query('email')
+    query('sb')
       .optional()
       .notEmpty()
-      .isEmail()
+      .isString()
+      .escape(),
+    query('of')
+      .optional()
+      .notEmpty()
+      .isNumeric()
+      .escape(),
+    query('lt')
+      .optional()
+      .notEmpty()
+      .isNumeric()
       .escape()
   ]
 }

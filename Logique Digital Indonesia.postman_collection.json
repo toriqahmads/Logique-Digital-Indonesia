@@ -29,12 +29,12 @@
 								},
 								{
 									"key": "email",
-									"value": "toriqamad@gmail.com",
+									"value": "toriqahmads@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "1234",
+									"value": "12345",
 									"type": "text"
 								},
 								{
@@ -44,12 +44,12 @@
 								},
 								{
 									"key": "credit_card_name",
-									"value": "Visa",
+									"value": "Toriq",
 									"type": "text"
 								},
 								{
 									"key": "credit_card_number",
-									"value": "4263982640269299",
+									"value": "4263982640269298",
 									"type": "text"
 								},
 								{
@@ -60,6 +60,11 @@
 								{
 									"key": "credit_card_cvv",
 									"value": "433",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_type",
+									"value": "Visa",
 									"type": "text"
 								},
 								{
@@ -83,7 +88,180 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Register OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "key",
+										"value": "{{api_key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Toriq",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "toriqahmads@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "sendang",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_name",
+											"value": "Toriq",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_number",
+											"value": "4263982640269298",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_expired",
+											"value": "04/2023",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_cvv",
+											"value": "433",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_type",
+											"value": "Visa",
+											"type": "text"
+										},
+										{
+											"key": "photos",
+											"type": "file",
+											"src": [
+												"/C:/Users/user/Pictures/12f67e7b-ce32-4ebc-8a99-597fb5f020d0.jpg",
+												"/C:/Users/user/Pictures/93cdb569-9413-411b-a920-ec8ed0de9352.jpg"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{endpoint}}/user/register",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e-Nr0WNPZ0Pih8Yht1vKiasJvbvhk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Apr 2022 15:22:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 15\n}"
+						}
+					]
 				},
 				{
 					"name": "Update User",
@@ -101,7 +279,7 @@
 							"formdata": [
 								{
 									"key": "user_id",
-									"value": " 7",
+									"value": "15",
 									"type": "text"
 								},
 								{
@@ -111,7 +289,7 @@
 								},
 								{
 									"key": "email",
-									"value": "toriqamad@gmail.com",
+									"value": "toriqahmads@gmail.com",
 									"type": "text"
 								},
 								{
@@ -145,6 +323,11 @@
 									"type": "text"
 								},
 								{
+									"key": "credit_card_type",
+									"value": "Visa",
+									"type": "text"
+								},
+								{
 									"key": "photos",
 									"type": "file",
 									"src": [
@@ -164,7 +347,184 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Update User OK",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "key",
+										"type": "text",
+										"value": "{{api_key}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "15",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Toriq",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "toriqahmads@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "sendang",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_name",
+											"value": "Visa",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_number",
+											"value": "4263982640269299",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_expired",
+											"value": "04/2023",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_cvv",
+											"value": "433",
+											"type": "text"
+										},
+										{
+											"key": "credit_card_type",
+											"value": "Visa",
+											"type": "text"
+										},
+										{
+											"key": "photos",
+											"type": "file",
+											"src": [
+												"/C:/Users/user/Pictures/12f67e7b-ce32-4ebc-8a99-597fb5f020d0.jpg",
+												"/C:/Users/user/Pictures/93cdb569-9413-411b-a920-ec8ed0de9352.jpg"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "{{endpoint}}/user",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Apr 2022 15:23:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
 				},
 				{
 					"name": "List",
@@ -178,17 +538,176 @@
 							}
 						],
 						"url": {
-							"raw": "{{endpoint}}/user/list",
+							"raw": "{{endpoint}}/user/list?q=name:toriq&ob=email&sb=desc&of=0&lt=2",
 							"host": [
 								"{{endpoint}}"
 							],
 							"path": [
 								"user",
 								"list"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "name:toriq"
+								},
+								{
+									"key": "ob",
+									"value": "email"
+								},
+								{
+									"key": "sb",
+									"value": "desc"
+								},
+								{
+									"key": "of",
+									"value": "0"
+								},
+								{
+									"key": "lt",
+									"value": "2"
+								}
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "List OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "key",
+										"type": "text",
+										"value": "{{api_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{endpoint}}/user/list?q=name:toriq&ob=email&sb=desc&of=0&lt=2",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"user",
+										"list"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "name:toriq"
+										},
+										{
+											"key": "ob",
+											"value": "email"
+										},
+										{
+											"key": "sb",
+											"value": "desc"
+										},
+										{
+											"key": "of",
+											"value": "0"
+										},
+										{
+											"key": "lt",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3594"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0a-X5exQh3HtH+L6u5YDjbrf25Z+J0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Apr 2022 15:39:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"rows\": [\n        {\n            \"id\": 7,\n            \"email\": \"toriqamad@gmail.com\",\n            \"name\": \"Toriq\",\n            \"address\": \"sendang\",\n            \"createdAt\": \"2022-04-30T14:50:57.000Z\",\n            \"updatedAt\": \"2022-04-30T15:01:34.000Z\",\n            \"deletedAt\": null,\n            \"Credit_Cards\": [\n                {\n                    \"id\": 1,\n                    \"credit_card_number\": \"4263982640269299\",\n                    \"credit_card_name\": \"Visa\",\n                    \"credit_card_expired\": \"04&#x2F;20\",\n                    \"credit_card_cvv\": \"433\",\n                    \"credit_card_type\": \"\",\n                    \"user_id\": 7,\n                    \"createdAt\": \"2022-04-30T14:50:57.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:01:34.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 7\n                }\n            ],\n            \"Photos\": [\n                {\n                    \"id\": 4,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651330893229.jpg\",\n                    \"url\": \"photos-1651330893229.jpg\",\n                    \"user_id\": 7,\n                    \"createdAt\": \"2022-04-30T15:01:34.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:01:34.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 7\n                },\n                {\n                    \"id\": 3,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651330893071.jpg\",\n                    \"url\": \"photos-1651330893071.jpg\",\n                    \"user_id\": 7,\n                    \"createdAt\": \"2022-04-30T15:01:34.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:01:34.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 7\n                },\n                {\n                    \"id\": 2,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651330257016.jpg\",\n                    \"url\": \"photos-1651330257016.jpg\",\n                    \"user_id\": 7,\n                    \"createdAt\": \"2022-04-30T14:50:57.000Z\",\n                    \"updatedAt\": \"2022-04-30T14:50:57.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 7\n                },\n                {\n                    \"id\": 1,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651330256845.jpg\",\n                    \"url\": \"photos-1651330256845.jpg\",\n                    \"user_id\": 7,\n                    \"createdAt\": \"2022-04-30T14:50:57.000Z\",\n                    \"updatedAt\": \"2022-04-30T14:50:57.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 7\n                }\n            ]\n        },\n        {\n            \"id\": 15,\n            \"email\": \"toriqahmads@gmail.com\",\n            \"name\": \"Toriq\",\n            \"address\": \"sendang\",\n            \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n            \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n            \"deletedAt\": null,\n            \"Credit_Cards\": [\n                {\n                    \"id\": 3,\n                    \"credit_card_number\": \"4263982640269299\",\n                    \"credit_card_name\": \"Visa\",\n                    \"credit_card_expired\": \"04&#x2F;20\",\n                    \"credit_card_cvv\": \"433\",\n                    \"credit_card_type\": \"Visa\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                }\n            ],\n            \"Photos\": [\n                {\n                    \"id\": 8,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332215113.jpg\",\n                    \"url\": \"photos-1651332215113.jpg\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:23:35.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:23:35.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                },\n                {\n                    \"id\": 7,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332215110.jpg\",\n                    \"url\": \"photos-1651332215110.jpg\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:23:35.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:23:35.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                },\n                {\n                    \"id\": 6,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332164586.jpg\",\n                    \"url\": \"photos-1651332164586.jpg\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:22:44.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                },\n                {\n                    \"id\": 5,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332164580.jpg\",\n                    \"url\": \"photos-1651332164580.jpg\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:22:44.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                },\n                {\n                    \"id\": 10,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332258556.jpg\",\n                    \"url\": \"photos-1651332258556.jpg\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:24:18.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                },\n                {\n                    \"id\": 9,\n                    \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332258547.jpg\",\n                    \"url\": \"photos-1651332258547.jpg\",\n                    \"user_id\": 15,\n                    \"createdAt\": \"2022-04-30T15:24:18.000Z\",\n                    \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n                    \"deletedAt\": null,\n                    \"UserId\": 15\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "User By Id",
@@ -202,17 +721,132 @@
 							}
 						],
 						"url": {
-							"raw": "{{endpoint}}/user/7",
+							"raw": "{{endpoint}}/user/15",
 							"host": [
 								"{{endpoint}}"
 							],
 							"path": [
 								"user",
-								"7"
+								"15"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "User By Id OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "key",
+										"type": "text",
+										"value": "{{api_key}}"
+									}
+								],
+								"url": {
+									"raw": "{{endpoint}}/user/15",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"user",
+										"15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2058"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"80a-qbIGuMz7vGEsORgT/ptahzm9buQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Apr 2022 15:24:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 15,\n    \"email\": \"toriqahmads@gmail.com\",\n    \"name\": \"Toriq\",\n    \"address\": \"sendang\",\n    \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n    \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n    \"deletedAt\": null,\n    \"Credit_Cards\": [\n        {\n            \"id\": 3,\n            \"credit_card_number\": \"4263982640269299\",\n            \"credit_card_name\": \"Visa\",\n            \"credit_card_expired\": \"04&#x2F;20\",\n            \"credit_card_cvv\": \"433\",\n            \"credit_card_type\": \"Visa\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n            \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        }\n    ],\n    \"Photos\": [\n        {\n            \"id\": 5,\n            \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332164580.jpg\",\n            \"url\": \"photos-1651332164580.jpg\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n            \"updatedAt\": \"2022-04-30T15:22:44.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        },\n        {\n            \"id\": 6,\n            \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332164586.jpg\",\n            \"url\": \"photos-1651332164586.jpg\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:22:44.000Z\",\n            \"updatedAt\": \"2022-04-30T15:22:44.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        },\n        {\n            \"id\": 7,\n            \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332215110.jpg\",\n            \"url\": \"photos-1651332215110.jpg\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:23:35.000Z\",\n            \"updatedAt\": \"2022-04-30T15:23:35.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        },\n        {\n            \"id\": 8,\n            \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332215113.jpg\",\n            \"url\": \"photos-1651332215113.jpg\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:23:35.000Z\",\n            \"updatedAt\": \"2022-04-30T15:23:35.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        },\n        {\n            \"id\": 9,\n            \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332258547.jpg\",\n            \"url\": \"photos-1651332258547.jpg\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:24:18.000Z\",\n            \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        },\n        {\n            \"id\": 10,\n            \"path_location\": \"D:\\\\Interview\\\\Logicue DIgital Indonesia\\\\public\\\\photos\\\\photos-1651332258556.jpg\",\n            \"url\": \"photos-1651332258556.jpg\",\n            \"user_id\": 15,\n            \"createdAt\": \"2022-04-30T15:24:18.000Z\",\n            \"updatedAt\": \"2022-04-30T15:24:18.000Z\",\n            \"deletedAt\": null,\n            \"UserId\": 15\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		}

@@ -6,6 +6,7 @@ const create = async ({
   credit_card_name,
   credit_card_expired,
   credit_card_cvv,
+  credit_card_type,
   user_id
 }, transaction) => {
   try {
@@ -14,6 +15,7 @@ const create = async ({
       credit_card_name,
       credit_card_expired,
       credit_card_cvv,
+      credit_card_type,
       user_id
     };
 
@@ -42,6 +44,9 @@ const findAll = async (filter, transaction) => {
     }
     if (filter.credit_card_cvv) {
       where.credit_card_cvv = { [Sequelize.Op.like]: `%${decodeURIComponent(filter.credit_card_cvv)}%` };
+    }
+    if (filter.credit_card_type) {
+      where.credit_card_type = { [Sequelize.Op.like]: `%${decodeURIComponent(filter.credit_card_type)}%` };
     }
     if (filter.user_id) {
       where.user_id = { [Sequelize.Op.eq]: filter.user_id };
@@ -79,6 +84,9 @@ const findOne = async (filter, transaction) => {
     }
     if (filter.credit_card_cvv) {
       where.credit_card_cvv = { [Sequelize.Op.eq]: `${decodeURIComponent(filter.credit_card_cvv)}` };
+    }
+    if (filter.credit_card_type) {
+      where.credit_card_type = { [Sequelize.Op.eq]: `${decodeURIComponent(filter.credit_card_type)}` };
     }
     if (filter.user_id) {
       where.user_id = { [Sequelize.Op.eq]: filter.user_id };
@@ -122,6 +130,7 @@ const update = async (
     credit_card_name,
     credit_card_expired,
     credit_card_cvv,
+    credit_card_type,
     user_id
   },
   transaction
@@ -140,6 +149,9 @@ const update = async (
     }
     if (update.credit_card_cvv && update.credit_card_cvv !== '') {
       cc.credit_card_cvv = update.credit_card_cvv;
+    }
+    if (update.credit_card_type && update.credit_card_type !== '') {
+      cc.credit_card_type = update.credit_card_type;
     }
 
     const update_cc = await cc.save({ transaction });

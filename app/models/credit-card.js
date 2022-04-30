@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(4),
       allowNull: false,
     },
+    credit_card_type: {
+      type: DataTypes.STRING(30),
+      allowNull: false
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false

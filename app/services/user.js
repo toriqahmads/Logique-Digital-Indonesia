@@ -14,6 +14,7 @@ const create = async ({
   credit_card_number,
   credit_card_expired,
   credit_card_cvv,
+  credit_card_type,
   files
 }, transaction) => {
   try {
@@ -34,6 +35,7 @@ const create = async ({
       credit_card_cvv,
       credit_card_number,
       credit_card_expired,
+      credit_card_type,
       user_id: user.id
     };
 
@@ -55,22 +57,43 @@ const create = async ({
 const findAll = async (filter, transaction) => {
   try {
     const where = {};
-    if (filter.name) {
-      where.name = { [Sequelize.Op.like]: `%${decodeURIComponent(filter.name)}%` };
+    if (filter.q && filter.q !== '') {
+      const split = decodeURIComponent(filter.q).split(':');
+      const key = split[0].trim();
+      const value = split[1].trim();
+      if (key === 'name') {
+        where.name = { [Sequelize.Op.like]: `%${decodeURIComponent(value)}%` };
+      }
+      if (key === 'address') {
+        where.address = { [Sequelize.Op.like]: `%${decodeURIComponent(value)}%` };
+      }
+      if (key === 'email') {
+        where.email = { [Sequelize.Op.like]: `%${decodeURIComponent(value)}%` };
+      }
     }
-    if (filter.address) {
-      where.address = { [Sequelize.Op.like]: `%${decodeURIComponent(filter.address)}%` };
+
+    let order = ['name', 'asc'];
+    if (filter.ob && filter.ob !== '') {
+      if (['name', 'email', 'address'].includes(filter.ob.trim().toLowerCase())) {
+        order = [filter.ob.trim().toLowerCase()];
+      }
     }
-    if (filter.email) {
-      where.email = { [Sequelize.Op.like]: `%${decodeURIComponent(filter.email)}%` };
+    if (filter.sb && filter.sb !== '') {
+      if (filter.sb.trim().toLowerCase() === 'asc' || filter.sb.trim().toLowerCase() === 'desc') {
+        order[1] = filter.sb.trim().toLowerCase();
+      }
     }
 
     const { count, rows } = await User.findAndCountAll({
       where,
       transaction,
+      distinct: true,
       attributes: {
         exclude: ['password']
       },
+      order: [order],
+      limit: filter.lt && filter.lt !== '' ? parseInt(filter.lt) : 0,
+      offset: filter.of && filter.of !== '' ? parseInt(filter.of) : 30,
       include: [{
         model: Credit_Card,
       }, {
@@ -160,6 +183,7 @@ const update = async (id, update = {
   credit_card_number,
   credit_card_expired,
   credit_card_cvv,
+  credit_card_type,
   files
 }, transaction) => {
   try {
@@ -188,6 +212,7 @@ const update = async (id, update = {
       credit_card_cvv: update.credit_card_cvv,
       credit_card_number: update.credit_card_number,
       credit_card_expired: update.credit_card_expired,
+      credit_card_type: update.credit_card_type,
       user_id: user.id
     };
 

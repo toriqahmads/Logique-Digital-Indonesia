@@ -10,7 +10,8 @@ const create = async (req, res, next) => {
       credit_card_name,
       credit_card_number,
       credit_card_expired,
-      credit_card_cvv
+      credit_card_cvv,
+      credit_card_type
     } = req.body;
 
     const files = req.files.map((file) => {
@@ -29,6 +30,7 @@ const create = async (req, res, next) => {
       credit_card_number,
       credit_card_expired,
       credit_card_cvv,
+      credit_card_type,
       files
     });
 
@@ -40,9 +42,9 @@ const create = async (req, res, next) => {
 
 const findAll = async(req, res, next) => {
   try {
-    const { name, address, email } = req.query;
+    const { q, ob, sb, lt, of } = req.query;
 
-    const users = await userService.findAll({ name, address, email });
+    const users = await userService.findAll({ q, ob, of, sb, lt });
 
     return res.status(200).json(users);
   } catch (err) {
@@ -73,7 +75,8 @@ const update = async (req, res, next) => {
       credit_card_name,
       credit_card_number,
       credit_card_expired,
-      credit_card_cvv
+      credit_card_cvv,
+      credit_card_type
     } = req.body;
 
     const files = req.files.map((file) => {
@@ -92,6 +95,7 @@ const update = async (req, res, next) => {
       credit_card_number,
       credit_card_expired,
       credit_card_cvv,
+      credit_card_type,
       files
     });
 
