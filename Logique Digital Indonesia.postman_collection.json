@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "e47d0011-65be-4554-adc5-0400c2b2932a",
+		"name": "Logique Digital Indonesia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Toriq",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "toriqamad@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "sendang",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_name",
+									"value": "Visa",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_number",
+									"value": "4263982640269299",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_expired",
+									"value": "04/2023",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_cvv",
+									"value": "433",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": [
+										"/C:/Users/user/Pictures/12f67e7b-ce32-4ebc-8a99-597fb5f020d0.jpg",
+										"/C:/Users/user/Pictures/93cdb569-9413-411b-a920-ec8ed0de9352.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/user/register",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "key",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": " 7",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Toriq",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "toriqamad@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "sendang",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_name",
+									"value": "Visa",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_number",
+									"value": "4263982640269299",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_expired",
+									"value": "04/2023",
+									"type": "text"
+								},
+								{
+									"key": "credit_card_cvv",
+									"value": "433",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": [
+										"/C:/Users/user/Pictures/12f67e7b-ce32-4ebc-8a99-597fb5f020d0.jpg",
+										"/C:/Users/user/Pictures/93cdb569-9413-411b-a920-ec8ed0de9352.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "key",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/user/list",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "key",
+								"type": "text",
+								"value": "{{api_key}}"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/user/7",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"user",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
